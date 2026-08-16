@@ -8,5 +8,7 @@ This repository contains my C++ solutions and practice code for Data Structures,
 * `array_questions_cpp/` - Basic array manipulation
 * `loop_questions_cpp/` - Iteration and logic building
 * `Hacker_Rank_cpp/` - Solutions to HackerRank C++ domain problems
+* `leetCode/` - Solutions to LeetCode C++ domain problems
+* `CodeChef/` - Solutions to CodeChef C++ domain problems
 
 *(More folders for LeetCode, CodeChef, and Codeforces will be added as the journey continues).*
