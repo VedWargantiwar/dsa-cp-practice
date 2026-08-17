@@ -11,4 +11,4 @@ This repository contains my C++ solutions and practice code for Data Structures,
 * `leetCode/` - Solutions to LeetCode C++ domain problems
 * `CodeChef/` - Solutions to CodeChef C++ domain problems
 
-*(More folders for LeetCode, CodeChef, and Codeforces will be added as the journey continues).*
+*(folder for Codeforces will be added as the journey continues).*
