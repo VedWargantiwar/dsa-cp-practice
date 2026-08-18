@@ -1,29 +1,24 @@
 #include <iostream> 
 using namespace std;
 
-void print(int b)
+void print(int n, int a, int b)
 {
-    if (b == 0)
+    if (a > n)
     {
-       return;
+      cout<<b;
+      return;
     }
+
+    print(n, a + 1, b + a);
     
-    cout<<b<<" ";
-
-    print(b - 1);
-
 }
-
-
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-
     int n;
     cin>>n;
-    int counter = n ; 
-    print(counter);
-    
+
+    print(n,1,0);
     return 0;
 }

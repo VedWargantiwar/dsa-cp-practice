@@ -1,29 +1,28 @@
 #include <iostream> 
 using namespace std;
 
-void print(int b)
+void print(int a)
 {
-    if (b == 0)
+    if (a == 0)
     {
-       return;
+        return;
     }
+
+    print(a - 1);
+
+    cout<<a<<" ";
     
-    cout<<b<<" ";
-
-    print(b - 1);
-
 }
-
 
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-
+    
     int n;
     cin>>n;
-    int counter = n ; 
-    print(counter);
     
+    print(n);
+
     return 0;
 }

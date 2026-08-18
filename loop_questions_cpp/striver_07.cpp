@@ -9,11 +9,11 @@ int main()
     int n;
     cin >> n;
 
-    for (int i = 1; i <= n; i++)
+    for (int i = n; i <= 1; i--    )
     {
         for (int a = 1; a <= 2 * n - 1; a++)
         {
-            if (i >= a-4 && i < a - 3 )
+            if (a > (i - 1) && a < 2*(i-1) )
             {
                 cout<<"*";
             }
