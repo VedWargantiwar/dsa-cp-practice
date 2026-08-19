@@ -1,15 +1,14 @@
-#include <iostream>
+#include <iostream> 
 using namespace std;
 
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-
     int n;
-    cin >> n;
-
-    for (int i = 0 ; i <= n; i++)
+    cin>>n;
+    
+    for (int i = n  ; i >= 0 ; i--)
     {
         for (int a = 1; a <= 2 * n - 1; a++)
         {
@@ -25,6 +24,6 @@ int main()
         }
         cout<<'\n';
     }
-
+    
     return 0;
 }

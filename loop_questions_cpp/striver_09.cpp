@@ -25,6 +25,23 @@ int main()
         }
         cout<<'\n';
     }
+     for (int i = n  ; i >= 0 ; i--)
+    {
+        for (int a = 1; a <= 2 * n - 1; a++)
+        {
+            if (a > (n - i) && a < n + i )
+            {
+                cout<<"*";
+            }
+            else
+            {
+                cout<<" ";
+            }
+            
+        }
+        cout<<'\n';
+    }
+
 
     return 0;
 }
