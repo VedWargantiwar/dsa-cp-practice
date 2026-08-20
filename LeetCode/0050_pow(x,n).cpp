@@ -8,13 +8,13 @@ public:
             {
                 if(n % 2 == 0)
                 { 
-                    int b = myPow(x, n/2);
-                    return x*b*b;
+                    double b = myPow(x, n/2);
+                    return b*b;
                 }
                 else 
                 {
-                    int b = myPow(x, (n +1)/2)
-                    return b*b;
+                    double b = myPow(x, (n - 1)/2);
+                    return b*b*x;
                 }
             }
             else return x*myPow(x, n - 1);
@@ -26,16 +26,16 @@ public:
             {
                 if(n % 2 == 0)
                 { 
-                    int b = myPow(x, n/2);
-                    return b*b/x;
+                    double b = myPow(x, n/2);
+                    return b*b;
                 }
                 else 
                 {
-                    int b = myPow(x, (n - 1)/2)
-                    return b*b;
+                    double b = myPow(x, (n + 1)/2);
+                    return b*b/x;
                 }
             }
-            else return x*myPow(x, n + 1);
+            else return myPow(x, n + 1)/x;
         }
     }
 };
