@@ -1,15 +1,8 @@
 int primechecker(int a)
 {
-    int returnvalue = 1; // if its prime then a value 1 will be returned
-    for (int i = 2; i*i <= a; i++)
-    {
-       if (a % i == 0)
-       {
-            returnvalue = 0; // if its not prime then a value 0 will be returned
-            break;
-       }
-       
+    if(a<2) return 0;
+    for (int i = 2; i*i <= a; i++){
+         if (a % i == 0) return 0;
     }
-    
-    return returnvalue;
+    return 1;
 }
