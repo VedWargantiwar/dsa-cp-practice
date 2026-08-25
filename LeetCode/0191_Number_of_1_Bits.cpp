@@ -14,7 +14,7 @@ public:
             return 0;
         }
 
-        if (n % 2 == 1)
+        if (n % 2 == 1)*
         {
             return 1 + hammingWeight(n / 2); // the 1 here can be replaced by n % 2 itself so this if else is not manadatory but works
         }
