@@ -8,26 +8,26 @@ using vll = vector<ll>;
 #define all(x) (x).begin(), (x).end()
 
 void solve() {
-    ll n,k,x;
-    cin>>n>>k>>x;
-    if(x <= k){
-        cout<<"NO\n";
-        return;
+    int n,d;
+    cin>>n>>d;
+    int c = 0;
+    vi v(n);
+    for(auto &i : v) cin>>i;
+    sort(all(v));
+    reverse(all(v));
+    for(auto i : v){
+        n -= d / i + 1;
+        if(n >= 0) c++;
+        else break;
     }
-    ll sum = (n*(n + 1) - (n - k) * (n - k + 1)) / 2;
-    cout<<(sum >= x ? "YES\n" : "NO\n");
+    cout<<c<<'\n';
 }
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int t;
-    cin >> t;
-
-    while (t--) {
-        solve();
-    }
+    solve();
 
     return 0;
 }

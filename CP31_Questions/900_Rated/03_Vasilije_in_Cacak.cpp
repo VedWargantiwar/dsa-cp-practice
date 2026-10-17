@@ -8,15 +8,11 @@ using vll = vector<ll>;
 #define all(x) (x).begin(), (x).end()
 
 void solve() {
-    ll a,b,n;
-    cin>>a>>b>>n;
-    ll s = b - 1;
-    while(n--){
-        ll d;
-        cin>>d;
-        s += min(a,d);
-    } 
-    cout<<s<<'\n';
+    ll n,k,x;
+    cin>>n>>k>>x;
+    ll mx = (n*(n + 1) - (n - k) * (n - k + 1)) / 2;
+    ll mn = k * (k + 1) / 2; 
+    cout<<(x <= mx && x >= mn ? "YES\n" : "NO\n");
 }
 
 int main() {

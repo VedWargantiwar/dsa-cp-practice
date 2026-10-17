@@ -8,9 +8,8 @@ using vll = vector<ll>;
 #define all(x) (x).begin(), (x).end()
 
 void solve() {
-    int n;
-    cin>>n;
-    string s = to_string(n);
+    string s;
+    cin>>s;
     int high = s.size() - 1;
     int c = 0;
     bool f = 0;

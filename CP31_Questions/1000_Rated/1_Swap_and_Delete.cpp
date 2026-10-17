@@ -6,18 +6,24 @@ using vi = vector<int>;
 using vll = vector<ll>;
 
 #define all(x) (x).begin(), (x).end()
-vi squares;
-int pre = {}(){
-    for(int i = 1; i < 61;i++) squares.push_back(i * i);
-    return 0;
-}();
 
 void solve() {
-    int n,k;
-    cin>>n>>k;
-    map<int,int> mpp;
-    for(int i = 1; i <= n;i++) mpp[i]++;
-    
+    string s;
+    cin>>s;
+    int o = 0;
+    int z = 0;
+    int n = 0;
+    for(auto i : s){
+        if(i == '1') o++;
+        else z++;
+    }
+    for(auto i : s){
+        if(i == '1') z--;
+        else o--;
+        if(z < 0 || o < 0) break;
+        n++;
+    }
+    cout<<s.size() - n<<'\n';
 }
 
 int main() {
