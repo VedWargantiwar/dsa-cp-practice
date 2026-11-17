@@ -12,19 +12,21 @@ void solve() {
     cin>>n>>c;
     vll v(n);
     for(auto &i : v) cin>>i;
-    ll ans = 0;
-    ll low = 1,high = 1e18;
+    ll low = 0,high = 1e9;
     while(low <= high){
         ll mid = high - (high - low) / 2;
-        ll s = c;
-        for(auto i : v) s -= (i + 2 * mid) * (i + 2 * mid);
-        if(s <= 0){
-            ans = mid;
-            low = mid + 1;
+        ll s = 0;
+        for(int i = 0;i < n;i++){
+            s += 1LL * (2 * mid + v[i]) * (2 * mid + v[i]);
+            if(s > c) break;
         }
+        if(s == c){
+            cout<<mid<<"\n";
+            return;
+        }
+        else if(s < c) low = mid + 1;
         else high = mid - 1;
     }
-    cout<<ans<<'\n';
 }
 
 int main() {

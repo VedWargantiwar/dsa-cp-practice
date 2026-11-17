@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+using ll = long long;
+using vi = vector<int>;
+using vll = vector<ll>;
+
+#define all(x) (x).begin(), (x).end()
+
+void solve() {
+    int m,n,k; cin>>m>>n>>k;
+    for(int a = 0;a < m;a++){
+        string s; cin>>s;
+        string ans = "";
+        for(int i = 0;i < n;i++) for(int j = 0;j < k;j++) ans += s[i];
+        for(int i = 0;i < k;i++) cout<<ans<<'\n';
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(0);
+    cin.tie(0), cout.tie(0);
+    int T = 1; 
+    while(T--) solve();
+    return 0;
+}
